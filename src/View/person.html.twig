@@ -1,0 +1,9 @@
+{% extends 'home.html.twig' %}
+
+{% block content %}
+<ul>
+    {% for person in persons|filter(person => person.age >= 18) -%}
+        <li>Name : {{ person.name }} Age : {{ person.age }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
